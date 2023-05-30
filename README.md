@@ -110,3 +110,20 @@ responsabilidades específicas.
   ![Área de Atracamento](/Documentation/areaAtracamento.png)
 * Travessa
   ![Travessa](/Documentation/travessas.png)
+
+### Algoritimos ====A fazer===
+
+### Compilação e Execução
+
+* Abra um terminal no diretório raiz do projeto.
+* Execute o comando make para compilar e executar o programa.
+
+### Limitações e Possíveis Melhorias
+O Port Simulator não perssiste dados em memória, 
+isso impede o salvamento e restauração do estado
+do simulador. Além disso, se o programa for 
+encerrado abruptamente, todas as informações 
+serão perdidas, o que pode ser inconveniente e 
+frustrante para os usuários.
+
+### Conclusão ====A fazer===
