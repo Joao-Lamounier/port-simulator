@@ -9,7 +9,10 @@ typedef struct Ship{
     Stack stack[4];
 }Ship;
 
-Ship *create_ship();
+/**
+ * Cria navios com quantidade de conteineres indetermidada (0 à 4)
+ * @return Navio
+ * */
 Ship *ship_arrived();
 
 #endif //PORTSIMULATOR_SHIP_H

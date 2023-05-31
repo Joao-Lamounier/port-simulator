@@ -13,3 +13,9 @@
 203	399	1685492928685071000	PortSimulator.exe	8b4adf5eff71165c
 3	171	1685492952557593900	CMakeFiles/PortSimulator.dir/src/stack.c.o	f7c94ca84814a55d
 172	361	1685492952748572400	PortSimulator.exe	8b4adf5eff71165c
+4	269	1685494290579565300	CMakeFiles/PortSimulator.dir/main.c.o	8d5b9b9f29fa36a9
+68	273	1685494290589320900	CMakeFiles/PortSimulator.dir/src/container.c.o	3cb8098b8bef3b09
+40	278	1685494290592831300	CMakeFiles/PortSimulator.dir/src/ship.c.o	51c07e602b8c2340
+105	327	1685494290638430200	CMakeFiles/PortSimulator.dir/src/utils.c.o	9b2aed9bb972a9b1
+141	338	1685494290664400200	CMakeFiles/PortSimulator.dir/src/stack.c.o	f7c94ca84814a55d
+338	577	1685494290899113000	PortSimulator.exe	8b4adf5eff71165c
