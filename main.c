@@ -2,16 +2,24 @@
 #include "include/container.h"
 #include "include/ship.h"
 #include "include/utils.h"
+#include "include/fifo.h"
 
 
 
 int main() {
     srand(time(NULL));
-    Ship *ship = ship_arrived();
 
-    printf("\nO navio %d chegou!", ship->id);
+    Fifo fifo = create_fifo();
+
     for (int i = 0; i < 4; ++i) {
-       printf("\nA pilha %d tem %d conteineres", i+1,  ship->stack[i].size);
+        Ship *ship = ship_arrived();
+        line_up(&fifo, ship);
+    }
+
+
+    for (int i = 0; i < 4; ++i) {
+        printf("\nFila %d", i+1);
+        print_fifo(&fifo);
     }
     return 0;
 }
