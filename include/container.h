@@ -6,6 +6,10 @@
 typedef struct Container{
 }Container;
 
+/**
+ * Cria um novo contêinerer
+ * @return Contêiner
+ * */
 Container* create_container();
 
 #endif //PORTSIMULATOR_CONTAINER_H

@@ -28,7 +28,6 @@ void push_multiple(Stack *_stack, int _n_container) {
     for (int i = 0; i < _n_container; ++i) {
        push(_stack);
     }
-
 }
 
 void pop(Stack *_stack){

@@ -7,7 +7,6 @@ void *allocate_memory(size_t _size) {
     }
     return ptr;
 }
-//double* real = (double*) alocarMemoria(sizeof(double));
 void free_memory(void* _ptr) {
     free(_ptr);
     _ptr=NULL;
