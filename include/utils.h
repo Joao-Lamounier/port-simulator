@@ -10,6 +10,6 @@ void *allocate_memory(size_t _size);
 
 void free_memory(void *_ptr);
 
-int random_numbers();
+int random_numbers(int _limit);
 
 #endif //PORTSIMULATOR_UTILS_H

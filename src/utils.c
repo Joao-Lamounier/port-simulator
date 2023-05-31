@@ -13,8 +13,7 @@ void free_memory(void* _ptr) {
     _ptr=NULL;
 }
 
-int random_numbers(){
-    srand(time(NULL));
-    return rand()%4;
+int random_numbers(int _limit){
+    return rand()%_limit;
 }
 
