@@ -3,4 +3,4 @@ project(PortSimulator C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(PortSimulator main.c src/ship.c include/ship.h src/container.c include/container.h src/utils.c include/utils.h src/stack.c include/stack.h src/fifo.c include/fifo.h)
+add_executable(PortSimulator main.c items/src/ship.c items/include/ship.h items/src/container.c items/include/container.h items/src/utils.c items/include/utils.h items/src/stack.c items/include/stack.h items/src/fifo.c items/include/fifo.h services/docking_area.c services/docking_area.h)

@@ -25,4 +25,6 @@ void free_memory(void *_ptr);
  * */
 int random_numbers(int _limit);
 
+int get_smaller(const int _vet[], int _size);
+
 #endif //PORTSIMULATOR_UTILS_H
