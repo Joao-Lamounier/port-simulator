@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include <stdbool.h>
 
 
 /**
@@ -26,5 +27,8 @@ void free_memory(void *_ptr);
 int random_numbers(int _limit);
 
 int get_smaller(const int _vet[], int _size);
+
+bool check_exit();
+
 
 #endif //PORTSIMULATOR_UTILS_H

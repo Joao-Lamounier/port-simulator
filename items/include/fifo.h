@@ -18,6 +18,7 @@ Fifo create_fifo();
 Element *create_element();
 void line_up(Fifo * _fifo, Ship *_ship);
 Ship *un_queue(Fifo *_fifo);
-void print_fifo(Fifo *_fifo);
+bool fifo_empty(Fifo *_fifo);
+
 
 #endif //PORTSIMULATOR_FIFO_H

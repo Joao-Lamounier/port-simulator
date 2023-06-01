@@ -16,29 +16,37 @@ Node *create_node() {
     return node;
 }
 
-void push(Stack *_stack){
+void push(Stack *_stack) {
     Node *node = create_node();
     node->container = create_container();
-    node->next= _stack->top;
-    _stack->top=node;
+    node->next = _stack->top;
+    _stack->top = node;
     _stack->size++;
 }
 
 void push_multiple(Stack *_stack, int _n_container) {
     for (int i = 0; i < _n_container; ++i) {
-       push(_stack);
+        push(_stack);
     }
 }
 
-void pop(Stack *_stack){
-    if(_stack->top==NULL)return;
+bool pop(Stack *_stack) {
 
-    Node* delete = _stack->top;
+    if(empty_stack(_stack))return false;
+
+    Node *delete = _stack->top;
     _stack->top = _stack->top->next;
     _stack->size--;
 
     free_memory(delete);
+    return true;
 }
+
+bool empty_stack(Stack *_stack) {
+    return _stack->top == NULL;
+}
+
+
 
 
 

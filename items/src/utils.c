@@ -29,3 +29,12 @@ int get_smaller(const int _vet[], int _size) {
     return j;
 }
 
+bool check_exit(){
+    char input;
+    input=getchar();
+
+    if(input=='\n') return true;
+
+    return false;
+}
+

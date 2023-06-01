@@ -85,11 +85,17 @@ build CMakeFiles/PortSimulator.dir/items/src/fifo.c.o: C_COMPILER__PortSimulator
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/items/src
 
-build CMakeFiles/PortSimulator.dir/services/docking_area.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/services/docking_area.c || cmake_object_order_depends_target_PortSimulator
-  DEP_FILE = CMakeFiles/PortSimulator.dir/services/docking_area.c.o.d
+build CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/services/docking_area.service/docking_area.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/services
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/services/docking_area.service
+
+build CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/views/docking_area.view.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/PortSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/views
 
 
 # =============================================================================
@@ -99,7 +105,7 @@ build CMakeFiles/PortSimulator.dir/services/docking_area.c.o: C_COMPILER__PortSi
 #############################################
 # Link the executable PortSimulator.exe
 
-build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/src/ship.c.o CMakeFiles/PortSimulator.dir/items/src/container.c.o CMakeFiles/PortSimulator.dir/items/src/utils.c.o CMakeFiles/PortSimulator.dir/items/src/stack.c.o CMakeFiles/PortSimulator.dir/items/src/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.c.o
+build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/src/ship.c.o CMakeFiles/PortSimulator.dir/items/src/container.c.o CMakeFiles/PortSimulator.dir/items/src/utils.c.o CMakeFiles/PortSimulator.dir/items/src/stack.c.o CMakeFiles/PortSimulator.dir/items/src/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.c.o CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o
   FLAGS = -g
   LINK_FLAGS = -Wl,--enable-auto-import
   OBJECT_DIR = CMakeFiles/PortSimulator.dir

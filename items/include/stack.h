@@ -1,6 +1,7 @@
 #ifndef PORTSIMULATOR_STACK_H
 #define PORTSIMULATOR_STACK_H
 
+
 #include "container.h"
 #include "utils.h"
 
@@ -43,6 +44,8 @@ void push_multiple(Stack *_stack, int _n_container);
  * Desempilha 1 contêiner
  * @param _stack: Pilha a ser desempilhada
  * */
-void pop(Stack *_stack);
+bool pop(Stack *_stack);
+
+bool empty_stack(Stack *_stack);
 
 #endif //PORTSIMULATOR_STACK_H

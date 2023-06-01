@@ -15,4 +15,8 @@ typedef struct Ship{
  * */
 Ship *ship_arrived();
 
+bool empty_ship(Ship *_ship);
+
+int total_containers(Ship *_ship);
+
 #endif //PORTSIMULATOR_SHIP_H
