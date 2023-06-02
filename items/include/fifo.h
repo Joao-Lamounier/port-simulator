@@ -5,12 +5,12 @@
 
 typedef struct Element {
     Ship *ship;
-    struct Element* next;
+    struct Element *next;
 } Element;
 
 typedef struct Fifo {
-    Element * first;
-    Element * last;
+    Element *first;
+    Element *last;
     int size;
 } Fifo;
 

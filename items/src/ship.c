@@ -8,7 +8,7 @@ Ship *ship_arrived() {
 
     for (int i = 0; i < 4; ++i) {
         ship->stack[i] = create_stack();
-        push_multiple(&ship->stack[i], random_numbers(5));
+        push_multiple(&ship->stack[i], random_numbers(4)+1);
     }
 
     return ship;

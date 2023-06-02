@@ -19,7 +19,11 @@ Element *create_element() {
 
 
 void line_up(Fifo *_fifo, Ship *_ship) {
-    if (_fifo->size >= 10) return;
+    if (_fifo->size >= 3) {
+        printf("Warning");
+        return;
+    }
+
 
     Element *element = create_element();
     element->ship = _ship;

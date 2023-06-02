@@ -1,6 +1,7 @@
 #include "docking_area.h"
 
 void docking_manager(Fifo _fifos[]) {
+
     int ships_arrived = random_numbers(4);
 
     for (int i = 0; i < ships_arrived; ++i) {
@@ -12,6 +13,17 @@ void docking_manager(Fifo _fifos[]) {
 }
 
 void container_crane(Fifo *_fifo) {
+    if(fifo_empty(_fifo))return;
+    bool unstack = false;
+    int i = 0;
+
+    while (!unstack && i != 4) {
+        unstack = pop(&(_fifo[0].first->ship->stack[i]));
+        i++;
+    }
+}
+
+void crossbeam_crane(Fifo *_fifo) {
     if(fifo_empty(_fifo))return;
     bool unstack = false;
     int i = 0;

@@ -38,3 +38,7 @@ bool check_exit(){
     return false;
 }
 
+WINBOOL color (int _color) {
+    return SetConsoleTextAttribute(GetStdHandle((STD_OUTPUT_HANDLE)), _color);
+}
+

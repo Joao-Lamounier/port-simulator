@@ -97,6 +97,12 @@ build CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o: C_COMPILER__Port
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/views
 
+build CMakeFiles/PortSimulator.dir/items/include/crossbeam.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/items/include/crossbeam.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/items/include/crossbeam.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/PortSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/items/include
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PortSimulator
@@ -105,7 +111,7 @@ build CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o: C_COMPILER__Port
 #############################################
 # Link the executable PortSimulator.exe
 
-build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/src/ship.c.o CMakeFiles/PortSimulator.dir/items/src/container.c.o CMakeFiles/PortSimulator.dir/items/src/utils.c.o CMakeFiles/PortSimulator.dir/items/src/stack.c.o CMakeFiles/PortSimulator.dir/items/src/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.c.o CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o
+build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/src/ship.c.o CMakeFiles/PortSimulator.dir/items/src/container.c.o CMakeFiles/PortSimulator.dir/items/src/utils.c.o CMakeFiles/PortSimulator.dir/items/src/stack.c.o CMakeFiles/PortSimulator.dir/items/src/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.c.o CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o CMakeFiles/PortSimulator.dir/items/include/crossbeam.c.o
   FLAGS = -g
   LINK_FLAGS = -Wl,--enable-auto-import
   OBJECT_DIR = CMakeFiles/PortSimulator.dir

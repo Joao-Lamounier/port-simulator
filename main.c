@@ -27,6 +27,9 @@ int main() {
         for (int i = 0; i < 4; ++i) {
            container_crane(&fifo[i]);
         }
+
+
+
         for (int i = 0; i < 4; ++i) {
               ship_sailed(&fifo[i]);
         }
