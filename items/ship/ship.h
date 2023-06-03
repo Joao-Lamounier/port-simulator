@@ -1,12 +1,13 @@
 #ifndef PORTSIMULATOR_SHIP_H
 #define PORTSIMULATOR_SHIP_H
 
-#include "stack.h"
+#include "../../adt/stack/stack.h"
+#include "../../consts.h"
 
 typedef struct Ship{
     int id;
     int time_units;
-    Stack stack[4];
+    Stack stack[SHIP_STACK];
 }Ship;
 
 /**

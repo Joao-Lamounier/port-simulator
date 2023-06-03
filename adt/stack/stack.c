@@ -1,4 +1,4 @@
-#include "../include/stack.h"
+#include "stack.h"
 
 Stack create_stack() {
     Stack *stack = (Stack *) allocate_memory(sizeof(Stack));
@@ -31,7 +31,6 @@ void push_multiple(Stack *_stack, int _n_container) {
 }
 
 bool pop(Stack *_stack) {
-
     if(empty_stack(_stack))return false;
 
     Node *delete = _stack->top;
@@ -39,6 +38,13 @@ bool pop(Stack *_stack) {
     _stack->size--;
 
     free_memory(delete);
+    return true;
+}
+
+bool pop_multiple(Stack* _stack) {
+    while (_stack->size>0) {
+        pop(_stack);
+    }
     return true;
 }
 

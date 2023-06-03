@@ -1,7 +1,7 @@
 #ifndef PORTSIMULATOR_FIFO_H
 #define PORTSIMULATOR_FIFO_H
 
-#include "ship.h"
+#include "../../items/ship/ship.h"
 
 typedef struct Element {
     Ship *ship;
