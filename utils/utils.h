@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdbool.h>
+#include <windows.h>
 
 
 /**
@@ -29,6 +30,8 @@ int random_numbers(int _limit);
 int get_smaller(const int _vet[], int _size);
 
 bool check_exit();
+
+WINBOOL color (int _color);
 
 
 #endif //PORTSIMULATOR_UTILS_H

@@ -1,4 +1,4 @@
-#include "../include/fifo.h"
+#include "fifo.h"
 
 Fifo create_fifo() {
     Fifo *fifo = (Fifo *) allocate_memory(sizeof(Fifo));
@@ -19,7 +19,7 @@ Element *create_element() {
 
 
 void line_up(Fifo *_fifo, Ship *_ship) {
-    if (_fifo->size >= 10) return;
+    if (_fifo->size >= FIFO_LIMIT) return;
 
     Element *element = create_element();
     element->ship = _ship;

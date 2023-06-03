@@ -2,8 +2,8 @@
 #define PORTSIMULATOR_STACK_H
 
 
-#include "container.h"
-#include "utils.h"
+#include "../../items/container/container.h"
+#include "../../utils/utils.h"
 
 typedef struct Node {
     Container *container;
@@ -47,5 +47,7 @@ void push_multiple(Stack *_stack, int _n_container);
 bool pop(Stack *_stack);
 
 bool empty_stack(Stack *_stack);
+
+bool pop_multiple(Stack* _stack);
 
 #endif //PORTSIMULATOR_STACK_H

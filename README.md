@@ -103,13 +103,13 @@ responsabilidades específicas.
 
 ### Estrutura de Dados
 * Pilha
-  ![Pilha](/Documentation/pilha.png)
+  ![Pilha](/documentation/pilha.png)
 * Navio
-  ![Navio](/Documentation/navio.png)
+  ![Navio](/documentation/navio.png)
 * Área de Atracamento
-  ![Área de Atracamento](/Documentation/areaAtracamento.png)
+  ![Área de Atracamento](/documentation/areaAtracamento.png)
 * Travessa
-  ![Travessa](/Documentation/travessas.png)
+  ![Travessa](/documentation/travessas.png)
 
 ### Algoritimos ====A fazer===
 
