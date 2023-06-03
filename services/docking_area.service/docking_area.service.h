@@ -4,11 +4,28 @@
 #include "../../adt/fifo/fifo.h"
 #include "../../items/crossbeam/crossbeam.h"
 #include "../../views/docking_area.view.h"
+#include "../../items/docks/docks.h"
+#include "../crossbeam.service/crossbeam.service.h"
 
-void docking_manager(Fifo _fifos[]);
-void container_crane(Fifo *_fifo, Crossbeam *_crossbeam);
-void ship_sailed(Fifo *_fifo);
+/**
+ * Gerencia a chegada de navios e a designação dos mesmos
+ * à fila de menor tamanho.
+ * @param _docs: Área de atracamento.
+ * */
+void docking_manager(Docs *_docs);
 
+/**
+ * Desempilha um contêiner de cada fila de navios
+ * e empilha na devida travessa.
+ * @param _docs: Área de atracamento.
+ * */
+void container_crane(Docs *_docs, CrossbeamCollection *_collection);
+
+/**
+ * Gerencia a saída de navios.
+ * @param _docs: Área de atracamento.
+ * */
+void ship_sailed(Docs *_docs);
 
 
 #endif //PORTSIMULATOR_DOCKING_AREA_SERVICE_H

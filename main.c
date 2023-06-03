@@ -9,40 +9,30 @@
 #include "views/docking_area.view.h"
 #include "items/crossbeam/crossbeam.h"
 #include "services/crossbeam.service/crossbeam.service.h"
+#include "items/docks/docks.h"
 
 
 int main() {
     bool enter;
     srand(time(NULL));
 
-    Fifo fifo[4];
-
-    for (int i = 0; i < 4; ++i) {
-        fifo[i] = create_fifo();
-    }
+    Docs *docs = create_docs();
 
     CrossbeamCollection *collection = create_crossbeam_collection();
-
 
     do {
         printf("\n========================================================================\n");
 
         crossbeam_sailed(collection);
-        for (int i = 0; i < 4; ++i) {
-            container_crane(&fifo[i], crossbeam_designate(collection));
-        }
+        container_crane(docs, collection);
 
-        docking_manager(fifo);
-        for (int i = 0; i < 4; ++i) {
-            show_docking(&fifo[i], i);
-        }
-        for (int i = 0; i < 4; ++i) {
-            ship_sailed(&fifo[i]);
-        }
+        docking_manager(docs);
+
+        show_docking(docs);
+
+        ship_sailed(docs);
 
         show_crossbeam(collection);
-
-
 
         enter = check_exit();
     } while (enter);
