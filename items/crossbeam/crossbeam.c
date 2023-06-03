@@ -31,7 +31,3 @@ bool crossbeam_available(Crossbeam *_crossbeam) {
 bool full_crossbeam(Crossbeam *_crossbeam) {
     return (_crossbeam->stack.size == CROSSBEAM_COUNT_CONTAINERS);
 }
-
-bool empty_crossbeam(Crossbeam *_crossbeam) {
-    return (_crossbeam->stack.size == 0);
-}

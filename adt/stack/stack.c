@@ -31,7 +31,7 @@ void push_multiple(Stack *_stack, int _n_container) {
 }
 
 bool pop(Stack *_stack) {
-    if(empty_stack(_stack))return false;
+    if (empty_stack(_stack))return false;
 
     Node *delete = _stack->top;
     _stack->top = _stack->top->next;
@@ -41,8 +41,8 @@ bool pop(Stack *_stack) {
     return true;
 }
 
-bool pop_multiple(Stack* _stack) {
-    while (_stack->size>0) {
+bool pop_multiple(Stack *_stack) {
+    while (_stack->size > 0) {
         pop(_stack);
     }
     return true;

@@ -23,7 +23,7 @@ Stack create_stack();
 
 /**
  * Cria um novo nó (Container *)
- * @return Nó
+ * @return Novo nó
  * */
 Node *create_node();
 
@@ -46,8 +46,18 @@ void push_multiple(Stack *_stack, int _n_container);
  * */
 bool pop(Stack *_stack);
 
+/**
+ * Verifica se a pilha está vazia.
+ * @param _stack: pilha à ser verificada.
+   @return: true se a pilha estiver vazia, false caso contrário.
+ * */
 bool empty_stack(Stack *_stack);
 
+/**
+ * Desempilha todos contêineres
+ * @param _stack: Pilha à ser desempilhada os contêineres.
+ * @return: true se o desempilhamento ocorreu, false caso contrário.
+ * */
 bool pop_multiple(Stack* _stack);
 
 #endif //PORTSIMULATOR_STACK_H

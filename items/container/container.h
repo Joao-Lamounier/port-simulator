@@ -3,13 +3,13 @@
 
 #include <stdlib.h>
 
-typedef struct Container{
-}Container;
+typedef struct Container {
+} Container;
 
 /**
- * Cria um novo contêinerer
+ * Cria um novo contêiner
  * @return Contêiner
  * */
-Container* create_container();
+Container *create_container();
 
 #endif //PORTSIMULATOR_CONTAINER_H

@@ -9,29 +9,28 @@ Crossbeam *crossbeam_designate(CrossbeamCollection *_collection) {
         count++;
     }
 
-
     if (!available) {
-        return _collection->crossbeam[count-1];
+        return _collection->crossbeam[count - 1];
     }
 
     return NULL;
 }
 
-Crossbeam *crossbeam_sailed(CrossbeamCollection *_collection){
+void crossbeam_sailed(CrossbeamCollection *_collection) {
     for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
         manager_time_crossbeam(_collection->crossbeam[i]);
         crossbeam_available(_collection->crossbeam[i]);
     }
 }
 
-void manager_time_crossbeam(Crossbeam *_crossbeam){
-    if(_crossbeam->time_units==2) {
-        _crossbeam->time_units=0;
+void manager_time_crossbeam(Crossbeam *_crossbeam) {
+    if (_crossbeam->time_units == 2) {
+        _crossbeam->time_units = 0;
         pop_multiple(&_crossbeam->stack);
-        _crossbeam->available=true;
+        _crossbeam->available = true;
         return;
     }
-    if(full_crossbeam(_crossbeam)){
+    if (full_crossbeam(_crossbeam)) {
         _crossbeam->time_units++;
     }
 }

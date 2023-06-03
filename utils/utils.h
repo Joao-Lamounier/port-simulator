@@ -27,11 +27,25 @@ void free_memory(void *_ptr);
  * */
 int random_numbers(int _limit);
 
+/**
+ * Seleciona o menor elemento do vetor
+ * @param _vet: Vetor de inteiros.
+ * @param _size: Tamanho do vetor.
+ * @return: Ìndice do vetor com o menor elemento.
+ * */
 int get_smaller(const int _vet[], int _size);
 
+/**
+ * Checagem de finalização do programa
+ * @return: true se o usuário quiser continuar, false caso contrário
+ * */
 bool check_exit();
 
-WINBOOL color (int _color);
-
+/**
+ * Gerencia as cores do terminal
+ * @param _docs: Número da cor de acordo com a tabela ANSI.
+ * @return: Cor desejada no terminal
+ * */
+WINBOOL color(int _color);
 
 #endif //PORTSIMULATOR_UTILS_H
