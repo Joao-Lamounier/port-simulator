@@ -3,7 +3,7 @@
 
 #include "../../adt/fifo/fifo.h"
 #include "../../items/crossbeam/crossbeam.h"
-#include "../../views/docking_area.view.h"
+#include "../../views/docking_area.view/docking_area.view.h"
 #include "../../items/docks/docks.h"
 #include "../crossbeam.service/crossbeam.service.h"
 

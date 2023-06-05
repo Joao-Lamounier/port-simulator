@@ -1,9 +1,9 @@
 #ifndef PORTSIMULATOR_DOCKING_AREA_VIEW_H
 #define PORTSIMULATOR_DOCKING_AREA_VIEW_H
 
-#include "../adt/fifo/fifo.h"
-#include "../items/crossbeam/crossbeam.h"
-#include "../items/docks/docks.h"
+#include "../../adt/fifo/fifo.h"
+#include "../../items/crossbeam/crossbeam.h"
+#include "../../items/docks/docks.h"
 
 /**
  * Mostra a situação das áreas de atracamento.
@@ -28,5 +28,17 @@ void show_departure_port(int _id);
  * @param _collection: Coleção de travessas à ser mostrada.
  * */
 void show_crossbeam(CrossbeamCollection *_collection);
+
+/**
+ * Mostra o tempo médio de espera.
+ * @param _docs: Área de atracamento.
+ * */
+void show_average_time(Docs *_docs);
+
+/**
+ * Mostra o total de movimento dos carros.
+ * @param _docs: Área de atracamento.
+ * */
+void show_movements(Docs *_docs);
 
 #endif //PORTSIMULATOR_DOCKING_AREA_VIEW_H
