@@ -31,6 +31,7 @@ int get_smaller(const int _vet[], int _size) {
 
 bool check_exit() {
     char input;
+    printf("\n-> ");
     input = getchar();
 
     if (input == '\n') return true;

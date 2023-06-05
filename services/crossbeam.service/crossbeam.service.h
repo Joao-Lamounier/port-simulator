@@ -2,6 +2,7 @@
 #define PORTSIMULATOR_CROSSBEAM_SERVICE_H
 
 #include "../../items/crossbeam/crossbeam.h"
+#include "../transport/transport.service.h"
 
 /**
  * Designa uma travessa disponível
@@ -14,12 +15,12 @@ Crossbeam *crossbeam_designate(CrossbeamCollection *_collection);
  * Verifica se uma pode sair para ser descarregada
  * @param _collection: Coleção de travessas à ser verificada
  * */
-void crossbeam_sailed(CrossbeamCollection *_collection);
+void crossbeam_sailed(CrossbeamCollection *_collection, Docs *_docs);
 
 /**
  * Gerencia quanto tempo as travessas ficaram fora da área de atracameto
  * @param _crossbeam: Travessa à ser gerenciada
  * */
-void manager_time_crossbeam(Crossbeam *_crossbeam);
+void manager_time_crossbeam(Crossbeam *_crossbeam, Docs *_docs);
 
 #endif //PORTSIMULATOR_CROSSBEAM_SERVICE_H

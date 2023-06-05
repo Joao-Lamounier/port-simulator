@@ -1,29 +1,34 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <windows.h>
+#include <wchar.h>
 #include "items/container/container.h"
 #include "items/ship/ship.h"
 #include "utils/utils.h"
 #include "adt/fifo/fifo.h"
 #include "services/docking_area.service/docking_area.service.h"
-#include "views/docking_area.view.h"
+#include "views/docking_area.view/docking_area.view.h"
 #include "items/crossbeam/crossbeam.h"
 #include "services/crossbeam.service/crossbeam.service.h"
 #include "items/docks/docks.h"
+#include "views/menu.view/menu.view.h"
+#include "services/transport/transport.service.h"
 
 
 int main() {
-    bool enter;
     srand(time(NULL));
 
     Docs *docs = create_docs();
 
     CrossbeamCollection *collection = create_crossbeam_collection();
 
-    do {
-        printf("\n========================================================================\n");
+    home_menu();
 
-        crossbeam_sailed(collection);
+    bool enter;
+    enter = check_exit();
+    while (enter) {
+        crossbeam_sailed(collection, docs);
+
         container_crane(docs, collection);
 
         docking_manager(docs);
@@ -34,9 +39,12 @@ int main() {
 
         show_crossbeam(collection);
 
-        enter = check_exit();
-    } while (enter);
+        show_average_time(docs);
 
+        show_movements(docs);
+
+        enter = check_exit();
+    }
 
     return 0;
 }

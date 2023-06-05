@@ -91,11 +91,11 @@ build CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.se
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/services/docking_area.service
 
-build CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/views/docking_area.view.c || cmake_object_order_depends_target_PortSimulator
-  DEP_FILE = CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o.d
+build CMakeFiles/PortSimulator.dir/views/docking_area.view/docking_area.view.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/views/docking_area.view/docking_area.view.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/views/docking_area.view/docking_area.view.c.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu11
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
-  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/views
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/views/docking_area.view
 
 build CMakeFiles/PortSimulator.dir/items/crossbeam/crossbeam.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/items/crossbeam/crossbeam.c || cmake_object_order_depends_target_PortSimulator
   DEP_FILE = CMakeFiles/PortSimulator.dir/items/crossbeam/crossbeam.c.o.d
@@ -115,6 +115,24 @@ build CMakeFiles/PortSimulator.dir/items/docks/docks.c.o: C_COMPILER__PortSimula
   OBJECT_DIR = CMakeFiles/PortSimulator.dir
   OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/items/docks
 
+build CMakeFiles/PortSimulator.dir/views/menu.view/menu.view.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/views/menu.view/menu.view.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/views/menu.view/menu.view.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/PortSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/views/menu.view
+
+build CMakeFiles/PortSimulator.dir/items/pier/pier.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/items/pier/pier.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/items/pier/pier.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/PortSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/items/pier
+
+build CMakeFiles/PortSimulator.dir/services/transport/transport.service.c.o: C_COMPILER__PortSimulator_Debug /cygdrive/c/Users/joaof/CLionProjects/PortSimulator/services/transport/transport.service.c || cmake_object_order_depends_target_PortSimulator
+  DEP_FILE = CMakeFiles/PortSimulator.dir/services/transport/transport.service.c.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu11
+  OBJECT_DIR = CMakeFiles/PortSimulator.dir
+  OBJECT_FILE_DIR = CMakeFiles/PortSimulator.dir/services/transport
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PortSimulator
@@ -123,7 +141,7 @@ build CMakeFiles/PortSimulator.dir/items/docks/docks.c.o: C_COMPILER__PortSimula
 #############################################
 # Link the executable PortSimulator.exe
 
-build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/ship/ship.c.o CMakeFiles/PortSimulator.dir/items/container/container.c.o CMakeFiles/PortSimulator.dir/utils/utils.c.o CMakeFiles/PortSimulator.dir/adt/stack/stack.c.o CMakeFiles/PortSimulator.dir/adt/fifo/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.service.c.o CMakeFiles/PortSimulator.dir/views/docking_area.view.c.o CMakeFiles/PortSimulator.dir/items/crossbeam/crossbeam.c.o CMakeFiles/PortSimulator.dir/services/crossbeam.service/crossbeam.service.c.o CMakeFiles/PortSimulator.dir/items/docks/docks.c.o
+build PortSimulator.exe: C_EXECUTABLE_LINKER__PortSimulator_Debug CMakeFiles/PortSimulator.dir/main.c.o CMakeFiles/PortSimulator.dir/items/ship/ship.c.o CMakeFiles/PortSimulator.dir/items/container/container.c.o CMakeFiles/PortSimulator.dir/utils/utils.c.o CMakeFiles/PortSimulator.dir/adt/stack/stack.c.o CMakeFiles/PortSimulator.dir/adt/fifo/fifo.c.o CMakeFiles/PortSimulator.dir/services/docking_area.service/docking_area.service.c.o CMakeFiles/PortSimulator.dir/views/docking_area.view/docking_area.view.c.o CMakeFiles/PortSimulator.dir/items/crossbeam/crossbeam.c.o CMakeFiles/PortSimulator.dir/services/crossbeam.service/crossbeam.service.c.o CMakeFiles/PortSimulator.dir/items/docks/docks.c.o CMakeFiles/PortSimulator.dir/views/menu.view/menu.view.c.o CMakeFiles/PortSimulator.dir/items/pier/pier.c.o CMakeFiles/PortSimulator.dir/services/transport/transport.service.c.o
   FLAGS = -g
   LINK_FLAGS = -Wl,--enable-auto-import
   OBJECT_DIR = CMakeFiles/PortSimulator.dir

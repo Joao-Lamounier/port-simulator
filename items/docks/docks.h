@@ -1,11 +1,11 @@
 #ifndef PORTSIMULATOR_DOCKS_H
 #define PORTSIMULATOR_DOCKS_H
 
-#include "../../adt/fifo/fifo.h"
+#include "../pier/pier.h"
 #include "../../consts.h"
 
 typedef struct Docs {
-    Fifo fifo[ROW_COUNT_MACRO];
+    Pier pier[ROW_COUNT_MACRO];
 } Docs;
 
 /**

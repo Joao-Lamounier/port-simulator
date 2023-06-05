@@ -86,7 +86,7 @@ principais interface de usuário e lógica do negocio.
 
 * Interface de usuário: A camada de interface de usuário
 é responsável por fornecer uma interface interativa, para
-que os usuários possam interagir com o Port Simulato.
+que os usuários possam interagir com o Port Simulator.
 Essa camada inclui o menu inicial e apresentação do
 processo que ocorre no porto.
 
@@ -99,7 +99,18 @@ em um conjunto de módulos interconectados, cada um com
 responsabilidades específicas.
 
 
-### Funcionalidades ====A fazer===
+### Funcionalidades
+* Chegada de saída de navios: O gerenciamento dos navios, que irão
+partir quando descarregados, e chegarão de 0 à 3 navios por unidade
+de tempo.
+* Situação das travessas: Permitir a visualização das travessas em
+tempo real, quantos contêineres possuem e quando serão levadas para 
+serem esvaziadas
+* Cálculo de tempo de espera: Calcular o tempo de espera 
+dos navios para atracação com base na quantidade de contêineres
+à serem descarregados.
+* Movimentação dos veículos: Diz quantas vezes cada veículo saiu para
+esvaziar alguma das travessas.
 
 ### Estrutura de Dados
 * Pilha
@@ -111,7 +122,19 @@ responsabilidades específicas.
 * Travessa
   ![Travessa](/documentation/travessas.png)
 
-### Algoritimos ====A fazer===
+### Algoritmos
+* Escalonamento de filas: Esse algoritmo é responsável
+por equilibrar o tamanho das filas, inserindo sempre
+na menor fila, assim, a maior diferença entre as filas
+será sempre de um navio.
+* Escalonamento de travessas: Este escalonamento
+não permite a inserção paralela de contêineres nas
+travessas, pois isso seria menos eficiente. A
+inserção de contêineres é realizada sempre na primeira
+travessa disponível.
+* Escalonamento de transportes: Uniformalizar a
+quantidade de idas ao patio de cada transporte, de modo que 
+a diferença de idas entre eles seja no máximo 1.
 
 ### Compilação e Execução
 
@@ -127,4 +150,4 @@ serão perdidas, o que pode ser inconveniente e
 frustrante para os usuários.
 
 ### Conclusão ====A fazer===
-git push --set-upstream origin developer    
+   
