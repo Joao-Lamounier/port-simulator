@@ -42,5 +42,6 @@ bool crossbeam_available(Crossbeam *_crossbeam);
  * */
 bool full_crossbeam(Crossbeam *_crossbeam);
 
+bool empty_crossbeam(Crossbeam *_crossbeam);
 
 #endif //PORTSIMULATOR_CROSSBEAM_H

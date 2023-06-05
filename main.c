@@ -25,23 +25,23 @@ int main() {
     home_menu();
 
     bool enter;
+    bool check = true;
     enter = check_exit();
     while (enter) {
-        crossbeam_sailed(collection, docs);
-
+        transport_movements(docs);
         container_crane(docs, collection);
 
         docking_manager(docs);
-
         show_docking(docs);
 
         ship_sailed(docs);
 
-        show_crossbeam(collection);
-
+        show_crossbeam(collection, docs, &check);
+        crossbeam_sailed(collection, docs);
         show_average_time(docs);
 
         show_movements(docs);
+
 
         enter = check_exit();
     }

@@ -23,4 +23,6 @@ void crossbeam_sailed(CrossbeamCollection *_collection, Docs *_docs);
  * */
 void manager_time_crossbeam(Crossbeam *_crossbeam, Docs *_docs);
 
+int teste(CrossbeamCollection *_collection);
+
 #endif //PORTSIMULATOR_CROSSBEAM_SERVICE_H

@@ -1,10 +1,9 @@
 #include "transport.service.h"
 
 void transport_movements(Docs *_docs) {
-    int size_movements[] = {_docs->pier[0].move, _docs->pier[1].move,
-                            _docs->pier[2].move, _docs->pier[3].move};
-
-    int smaller = get_smaller(size_movements, ROW_COUNT_MACRO);
-
-    _docs->pier[smaller].move++;
+    for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
+        if(_docs->pier[i].replacement==5){
+            _docs->pier[i].move++;
+        }
+    }
 }
