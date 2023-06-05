@@ -33,16 +33,22 @@ void show_departure_port(int _id) {
     color(7);
 }
 
-void show_crossbeam(CrossbeamCollection *collection) {
+void show_crossbeam(CrossbeamCollection *collection, Docs *_docs, bool *first) {
+
     printf("\nTravessas\n");
     for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
-        printf(" T%d: ", i + 1);
-        if (collection->crossbeam[i]->available) {
+        if (i <= 3) printf(" Area %d-> T%d: ", i + 1, _docs->pier[i].index_cross + 1);
+        else printf(" T%d: ", i + 1);
+
+        if (collection->crossbeam[i]->stack.size <= 5 &&
+            collection->crossbeam[i]->time_units == 0) {
+
             printf("%d  |", collection->crossbeam[i]->stack.size);
         } else {
             printf("🚜 |");
         }
     }
+    *first = false;
 }
 
 void show_average_time(Docs *_docs) {

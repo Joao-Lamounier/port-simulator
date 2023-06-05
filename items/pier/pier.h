@@ -8,6 +8,7 @@ typedef struct Pier {
     int move;
     int all_containers;
     int index_cross;
+    int replacement;
 } Pier;
 
 /**

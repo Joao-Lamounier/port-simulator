@@ -16,8 +16,11 @@ void docking_manager(Docs *_docs) {
 
 void container_crane(Docs *_docs, CrossbeamCollection *_collection) {
     for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
-        Crossbeam *crossbeam = crossbeam_designate(_collection);
-        if (!fifo_empty(&(_docs->pier[i].fifo)) && crossbeam != NULL) {
+
+        if(_docs->pier[i].replacement==5){
+            replacement_crossbeam(&_docs->pier[i], _collection);
+        }
+        if (!fifo_empty(&(_docs->pier[i].fifo)) &&_docs->pier[i].index_cross!=-1) {
             bool unstack = false;
             int count = 0;
 
@@ -26,9 +29,11 @@ void container_crane(Docs *_docs, CrossbeamCollection *_collection) {
                 count++;
             }
             _docs->pier[i].all_containers -= 1;
-            push(&crossbeam->stack);
-
+            push(&_collection->crossbeam[_docs->pier[i].index_cross]->stack);
+            _docs->pier[i].replacement++;
         }
+
+
     }
 }
 
@@ -43,4 +48,13 @@ void ship_sailed(Docs *_docs) {
             }
         }
     }
+}
+
+void replacement_crossbeam(Pier *_pier, CrossbeamCollection *_collection) {
+   // for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
+      //  if (_docs->pier[i].replacement == 5) {
+            _pier->index_cross = teste(_collection);
+            if(_pier->index_cross!=-1)_pier->replacement = 0;
+        //}
+    //}
 }
