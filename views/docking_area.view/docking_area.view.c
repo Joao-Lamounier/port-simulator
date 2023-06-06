@@ -4,12 +4,15 @@ void show_docking(Docs *_docs) {
     for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
         Element *element = _docs->pier[i].fifo.first;
 
-        printf("\n--------------------------\n");
         printf("Area %d\n", i + 1);
         while (element != NULL) {
             if (total_containers(element->ship) > 0)show_ship(element->ship);
             element = element->next;
         }
+        printf("\nTravessa: ");
+        if (_docs->pier[i].index_cross != -1) printf("%d", _docs->pier[i].index_cross + 1);
+        else printf("🚫");
+        printf("\n--------------------------\n");
     }
 }
 
@@ -17,7 +20,7 @@ void show_ship(Ship *_ship) {
     color(11);
     printf("  __|_____%02d_", total_containers(_ship));
     color(11);
-    printf("\n  \\_%d_____/ \n", _ship->id);
+    printf("\n  \\_%d_____/ ⏳%d\n", _ship->id, _ship->time_units);
     color(1);
     printf("~~~~~~~~~~~~~~~\n");
     color(7);
@@ -33,22 +36,19 @@ void show_departure_port(int _id) {
     color(7);
 }
 
-void show_crossbeam(CrossbeamCollection *collection, Docs *_docs, bool *first) {
+void show_crossbeam(CrossbeamCollection *collection) {
 
     printf("\nTravessas\n");
-    for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
-        if (i <= 3) printf(" Area %d-> T%d: ", i + 1, _docs->pier[i].index_cross + 1);
-        else printf(" T%d: ", i + 1);
 
+    for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
+        printf(" T%d: ", i + 1);
         if (collection->crossbeam[i]->stack.size <= 5 &&
             collection->crossbeam[i]->time_units == 0) {
-
             printf("%d  |", collection->crossbeam[i]->stack.size);
         } else {
             printf("🚜 |");
         }
     }
-    *first = false;
 }
 
 void show_average_time(Docs *_docs) {

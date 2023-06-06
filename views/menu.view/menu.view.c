@@ -1,6 +1,6 @@
 #include "menu.view.h"
 
-void home_menu(){
+void home_menu() {
     color(5);
     printf("╔══════════════════════════════════════════════════════════════════════╗\n");
     printf("║                             Bem-vindo ao                             ║\n");

@@ -4,11 +4,11 @@
 #include "../../adt/stack/stack.h"
 #include "../../consts.h"
 
-typedef struct Ship{
+typedef struct Ship {
     int id;
     int time_units;
     Stack stack[SHIP_STACK];
-}Ship;
+} Ship;
 
 /**
  * Cria um navio com quantidade de conteineres indetermidada (0 à 4)

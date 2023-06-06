@@ -24,7 +24,6 @@ bool crossbeam_available(Crossbeam *_crossbeam) {
     if (full_crossbeam(_crossbeam)) {
         _crossbeam->available = false;
     }
-
     return _crossbeam->available;
 }
 
