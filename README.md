@@ -203,7 +203,7 @@ a um novo cais.
 * Abra um terminal no diretório raiz do projeto.
 * Execute o seguinte comando para compilar e executar o programa.
 
-    make port-simulator
+    `make port-simulator`
 
 ### Limitações e Possíveis Melhorias
 O Port Simulator não perssiste dados em memória, 
