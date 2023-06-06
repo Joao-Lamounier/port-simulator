@@ -7,15 +7,15 @@
 /**
  * Designa uma travessa disponível
  * @param _collection: Coleção de travessas
- * @return: Uma travessa se existir uma disponível, NULL caso contrário.
+ * @return: Uma travessa se existir uma disponível, -1 caso contrário.
  * */
-Crossbeam *crossbeam_designate(CrossbeamCollection *_collection);
+int crossbeam_designate(CrossbeamCollection *_collection);
 
 /**
  * Verifica se uma pode sair para ser descarregada
  * @param _collection: Coleção de travessas à ser verificada
  * */
-void crossbeam_sailed(CrossbeamCollection *_collection, Docs *_docs);
+void crossbeam_sailed(Docs *_docs, CrossbeamCollection *_collection);
 
 /**
  * Gerencia quanto tempo as travessas ficaram fora da área de atracameto
@@ -23,6 +23,11 @@ void crossbeam_sailed(CrossbeamCollection *_collection, Docs *_docs);
  * */
 void manager_time_crossbeam(Crossbeam *_crossbeam, Docs *_docs);
 
-int teste(CrossbeamCollection *_collection);
+/**
+ * Realiza a troca de travessas.
+ * @param _pier: Cais à receber a travessa.
+ * @param _collection: Coleção de travessas.
+ * */
+void replacement_crossbeam(Pier *_pier, CrossbeamCollection *_collection);
 
 #endif //PORTSIMULATOR_CROSSBEAM_SERVICE_H

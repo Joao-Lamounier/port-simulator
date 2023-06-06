@@ -27,7 +27,7 @@ void show_departure_port(int _id);
  * Mostra a situação de todas as travessas.
  * @param _collection: Coleção de travessas à ser mostrada.
  * */
-void show_crossbeam(CrossbeamCollection *_collection, Docs *_docs, bool *_flag);
+void show_crossbeam(CrossbeamCollection *_collection);
 
 /**
  * Mostra o tempo médio de espera.

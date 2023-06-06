@@ -1,5 +1,7 @@
 # Port Simulator
 
+![port](documentation/Port%20(2).png)
+
 ### Introdução
 
 O trabalho tem como objetivo a implementação de
@@ -113,14 +115,77 @@ dos navios para atracação com base na quantidade de contêineres
 esvaziar alguma das travessas.
 
 ### Estrutura de Dados
+* Contêiner
+    
+  ![Container](documentation/container.png) 
+  * Criar novos contêineres;
+  
+
+* Node 
+
+  ![Node](documentation/node.png)
+  *  Criar um novo Node;
+    
+
 * Pilha
-  ![Pilha](/documentation/pilha.png)
-* Navio
-  ![Navio](/documentation/navio.png)
-* Área de Atracamento
-  ![Área de Atracamento](/documentation/areaAtracamento.png)
-* Travessa
-  ![Travessa](/documentation/travessas.png)
+
+  ![Stack](/documentation/stack.png)
+  * Criar uma nova pilha;
+  * Empilhar um node;
+  * Empilhar 'n' nodes;
+  * Desempilhar um node;
+  * Desempilhar a pilha toda;
+  * Verificar pilha vazia;
+
+
+* Ship
+
+   ![Ship](/documentation/ship.png)
+  * Criar um novo navio;
+  * Verificar se o navio foi descarregado;
+  * Somatório de todos os contêineres do navio;
+
+
+* Element 
+
+  ![Element](documentation/element.png)
+  * Criar um novo elemento;
+
+
+* Fifo
+
+  ![Fifo](documentation/fifo.png)
+  * Criar uma nova fila;
+  * Enfileirar um elemento à fila;
+  * Desenfileirar um elemento à fila;
+  * Verificar se a fila está vazia;
+  
+
+* Pier 
+
+    ![Pier](documentation/pier.png)
+  * Criar um novo cais;
+  
+
+* Docs
+  
+    ![Docs](documentation/docs.png)
+  * Criar um novo conjunto de cais;
+
+* Crossbeam 
+
+   ![Crossbeam](documentation/crossbeam.png)
+  * Criar uma nova travessa;
+  * Verificar se a travessa disponível;
+  * Verificar se uma travessa está cheia;
+  * Verificar se a travessa está vazia
+
+
+* Crossbeam Collection
+
+  ![CrossbeamCollection](documentation/cross-collection.png)
+  * Criar uma nova coleção de travessas;
+
 
 ### Algoritmos
 * Escalonamento de filas: Esse algoritmo é responsável
@@ -128,13 +193,10 @@ por equilibrar o tamanho das filas, inserindo sempre
 na menor fila, assim, a maior diferença entre as filas
 será sempre de um navio.
 * Escalonamento de travessas: Este escalonamento
-não permite a inserção paralela de contêineres nas
-travessas, pois isso seria menos eficiente. A
-inserção de contêineres é realizada sempre na primeira
-travessa disponível.
-* Escalonamento de transportes: Uniformalizar a
-quantidade de idas ao patio de cada transporte, de modo que 
-a diferença de idas entre eles seja no máximo 1.
+não atrela a travessa ao cais fixamente, porém
+quando uma travessa é designada à um cais ela só
+corresponde a ele, quando encher poderá ser atribuida
+a um novo cais.
 
 ### Compilação e Execução
 
@@ -149,5 +211,38 @@ encerrado abruptamente, todas as informações
 serão perdidas, o que pode ser inconveniente e 
 frustrante para os usuários.
 
-### Conclusão ====A fazer===
+### Conclusão
+  O trabalho foi realizado com o intuito de representar
+como ocorre o processo interno de um porto 
+  fictício, construir um simulador portuário em 
+linguagem C foi empolgante e enriquecedor. O projeto
+permitiu praticar os conceitos primordiais da programação, 
+como a aplicação de algoritmos e diversas estruturas
+de dados.
+
+  Durante o desenvolvimento do simulador, pude 
+compreender melhor as operações internas de um
+  porto e como trazer esses conceitos para a 
+programação. 
+
+  Ao longo do desenvolvimento, foram utilizados
+conceitos como filas para representar a chegada
+de navios e pilhas para representar as movimentações
+de contêiners.
+
+Embora este simulador de porto esteja funcional
+e ofereça uma visão geral das operações portuárias
+, reconheço que existem áreas em que o projeto 
+poderia ser aprimorado. Por exemplo, poderiam ser
+adicionadas mais funcionalidades, como a persistência
+de dados em memória.
+
+No geral, este projeto me proporcionou um valioso
+aprendizado sobre aplicação de estrutura de dados
+em problemas reais.
+
+
+Autor: João Felipe Silva Lamounier.
+
+
    

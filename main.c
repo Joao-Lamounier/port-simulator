@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <windows.h>
-#include <wchar.h>
 #include "items/container/container.h"
 #include "items/ship/ship.h"
 #include "utils/utils.h"
@@ -20,28 +18,39 @@ int main() {
 
     Docs *docs = create_docs();
 
-    CrossbeamCollection *collection = create_crossbeam_collection();
+    CrossbeamCollection *crossbeam_colletion = create_crossbeam_collection();
 
     home_menu();
 
     bool enter;
-    bool check = true;
     enter = check_exit();
     while (enter) {
-        transport_movements(docs);
-        container_crane(docs, collection);
+        //Verificação se houve movimentações dos veículos
+        transport_movements(docs, crossbeam_colletion);
 
+        //Desempilha do navio e empilha na travessa
+        container_crane(docs, crossbeam_colletion);
+
+        //Gera navios e designa para a devida fila
         docking_manager(docs);
+
+        //Mostra as áreas de atracamento
         show_docking(docs);
 
+        //Verifica se um navio pode partir (caso descarregado)
         ship_sailed(docs);
 
-        show_crossbeam(collection, docs, &check);
-        crossbeam_sailed(collection, docs);
+        //Mostra as travessas
+        show_crossbeam(crossbeam_colletion);
+
+        //Gerencia as travessas, quando cheias são levadas ao pátio
+        crossbeam_sailed(docs, crossbeam_colletion);
+
+        //Mostra tempo médio das filas
         show_average_time(docs);
 
+        //Mostra a quantidade que cada transporte se movimentou
         show_movements(docs);
-
 
         enter = check_exit();
     }

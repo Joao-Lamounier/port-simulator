@@ -1,22 +1,6 @@
 #include "crossbeam.service.h"
 
-Crossbeam *crossbeam_designate(CrossbeamCollection *_collection) {
-    bool available = true;
-    int count = 0;
-
-    while (available && count != ROW_COUNT_MACRO) {
-        available = full_crossbeam(_collection->crossbeam[count]);
-        count++;
-    }
-
-    if (!available) {
-        return _collection->crossbeam[count - 1];
-    }
-
-    return NULL;
-}
-
-int teste(CrossbeamCollection *_collection) {
+int crossbeam_designate(CrossbeamCollection *_collection) {
     bool available = false;
     int count = 0;
 
@@ -25,7 +9,7 @@ int teste(CrossbeamCollection *_collection) {
         count++;
     }
 
-    if (available&& _collection->crossbeam[count-1]->available) {
+    if (available && _collection->crossbeam[count - 1]->available) {
         _collection->crossbeam[count - 1]->available = false;
         return count - 1;
     }
@@ -33,7 +17,7 @@ int teste(CrossbeamCollection *_collection) {
     return -1;
 }
 
-void crossbeam_sailed(CrossbeamCollection *_collection, Docs *_docs) {
+void crossbeam_sailed(Docs *_docs, CrossbeamCollection *_collection) {
     for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
         manager_time_crossbeam(_collection->crossbeam[i], _docs);
     }
@@ -50,4 +34,9 @@ void manager_time_crossbeam(Crossbeam *_crossbeam, Docs *_docs) {
         _crossbeam->available = false;
         _crossbeam->time_units++;
     }
+}
+
+void replacement_crossbeam(Pier *_pier, CrossbeamCollection *_collection) {
+    _pier->index_cross = crossbeam_designate(_collection);
+    if (_pier->index_cross != -1)_pier->replacement = 0;
 }

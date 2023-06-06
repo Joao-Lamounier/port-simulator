@@ -42,6 +42,11 @@ bool crossbeam_available(Crossbeam *_crossbeam);
  * */
 bool full_crossbeam(Crossbeam *_crossbeam);
 
+/**
+ * Verifica de a travessa está vazia
+ * @param _crossbeam: Travessa à ser verificada
+ * @return: true se ela estiver vazia, false caso contrário.
+ * */
 bool empty_crossbeam(Crossbeam *_crossbeam);
 
 #endif //PORTSIMULATOR_CROSSBEAM_H

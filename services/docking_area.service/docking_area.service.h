@@ -27,7 +27,4 @@ void container_crane(Docs *_docs, CrossbeamCollection *_collection);
  * */
 void ship_sailed(Docs *_docs);
 
-void replacement_crossbeam(Pier *_pier, CrossbeamCollection *_collection);
-
-
 #endif //PORTSIMULATOR_DOCKING_AREA_SERVICE_H
