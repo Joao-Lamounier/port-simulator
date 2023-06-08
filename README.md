@@ -201,7 +201,10 @@ a um novo cais.
 ### Compilação e Execução
 
 * Abra um terminal no diretório raiz do projeto.
-* Execute o comando make para compilar e executar o programa.
+* Execute o seguinte comando para compilar e 
+executar o programa.
+
+  `make port-simulator`
 
 ### Limitações e Possíveis Melhorias
 O Port Simulator não perssiste dados em memória, 

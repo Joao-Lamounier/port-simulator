@@ -17,4 +17,15 @@ typedef struct Pier {
  * */
 Pier create_pier();
 
+/**
+ * Verifica se está na hora do cais trocar de travessa.
+ * @return: True caso sim, false caso contrário.
+ * */
+bool pier_replacement(Pier *_pier);
+
+/**
+ * Verifica se o cais recebeu uma travessa.
+ * @return: True caso sim, false caso contrário.
+ * */
+bool received_crossbeam(Pier *_pier);
 #endif //PORTSIMULATOR_PIER_H

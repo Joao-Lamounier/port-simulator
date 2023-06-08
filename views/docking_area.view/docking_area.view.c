@@ -10,29 +10,43 @@ void show_docking(Docs *_docs) {
             element = element->next;
         }
         printf("\nTravessa: ");
-        if (_docs->pier[i].index_cross != -1) printf("%d", _docs->pier[i].index_cross + 1);
+        if (received_crossbeam(_docs->pier)) printf("%d", _docs->pier[i].index_cross + 1);
         else printf("🚫");
+        color(6);
         printf("\n--------------------------\n");
+        color(7);
     }
 }
 
 void show_ship(Ship *_ship) {
-    color(11);
-    printf("  __|_____%02d_", total_containers(_ship));
-    color(11);
-    printf("\n  \\_%d_____/ ⏳%d\n", _ship->id, _ship->time_units);
     color(1);
+    printf("  __|_____");
+    color(7);
+    printf("%02d", total_containers(_ship));
+    color(1);
+    printf("_\n  \\_");
+    color(7);
+    printf("%d", _ship->id);
+    color(1);
+    printf("_____/");
+    color(7);
+    printf("⏳%d\n", _ship->time_units);
+    color(4);
     printf("~~~~~~~~~~~~~~~\n");
     color(7);
 }
 
 void show_departure_port(int _id) {
     printf("\nSaída do Porto\n");
-    color(11);
-    printf("  ________|__");
-    printf("\n  \\_____%d_/ \n", _id);
     color(1);
-    printf("~~~~~~~~~~~~~~~~~~~~~~\n");
+    printf("  ________|__");
+    printf("\n  \\_____");
+    color(7);
+    printf("%d", _id);
+    color(1);
+    printf("_/ \n");
+    color(4);
+    printf("~~~~~~~~~~~~~~~\n");
     color(7);
 }
 
@@ -41,8 +55,10 @@ void show_crossbeam(CrossbeamCollection *collection) {
     printf("\nTravessas\n");
 
     for (int i = 0; i < CROSSBEAM_COUNT_MACRO; ++i) {
+        color(2);
         printf(" T%d: ", i + 1);
-        if (collection->crossbeam[i]->stack.size <= 5 &&
+        color(7);
+        if (collection->crossbeam[i]->stack.size <= CROSSBEAM_COUNT_CONTAINERS &&
             collection->crossbeam[i]->time_units == 0) {
             printf("%d  |", collection->crossbeam[i]->stack.size);
         } else {
@@ -59,16 +75,22 @@ void show_average_time(Docs *_docs) {
         if (pier.fifo.size == 0) {
             time = 0;
         } else {
-            time = (float) (pier.all_containers) / (float) (pier.fifo.size);
+            time = arithmetic_average((float) (pier.all_containers), (pier.fifo.size));
         }
-        printf("🕘A%d: %.1f |", i + 1, time);
+        color(2);
+        printf("🕘A%d: ", i + 1);
+        color(7);
+        printf("%.1f |", time);
     }
 }
 
 void show_movements(Docs *_docs) {
     printf("\nMovimentações\n");
     for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
-        printf("🔁🚜%d°: %d | ", i + 1, _docs->pier[i].move);
+        color(2);
+        printf("🔁🚜%d°: ", i + 1);
+        color(7);
+        printf("%d | ", _docs->pier[i].move);
     }
 }
 

@@ -4,7 +4,7 @@ int crossbeam_designate(CrossbeamCollection *_collection) {
     bool available = false;
     int count = 0;
 
-    while (!available && count != 5) {
+    while (!available && count != CROSSBEAM_COUNT_MACRO) {
         available = empty_crossbeam(_collection->crossbeam[count]);
         count++;
     }

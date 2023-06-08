@@ -17,10 +17,10 @@ void docking_manager(Docs *_docs) {
 
 void container_crane(Docs *_docs, CrossbeamCollection *_collection) {
     for (int i = 0; i < ROW_COUNT_MACRO; ++i) {
-        if (_docs->pier[i].replacement == 5) {
+        if (pier_replacement(&_docs->pier[i]))
             replacement_crossbeam(&_docs->pier[i], _collection);
-        }
-        if (!fifo_empty(&(_docs->pier[i].fifo)) && _docs->pier[i].index_cross != -1) {
+
+        if (!fifo_empty(&(_docs->pier[i].fifo)) && received_crossbeam(&_docs->pier[i])) {
             bool unstack = false;
             int count = 0;
 
