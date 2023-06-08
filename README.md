@@ -54,8 +54,16 @@ de funcionamento do simulador de porto em linguagem C.
 
 ### Requisitos do Sistema
 
-* Sistema Operacional Windows;
+* Sistemas Operacionais:
+   * Windows;
+   * macOS;
+   * Linux;
+
 * Compilador C;
+
+O programa é compatível com diferentes 
+sistemas operacionais, incluindo Windows, macOS
+e Linux. Certifique-se de ter um compilador C instalado em seu sistema, independentemente do sistema operacional escolhido.
 
 ### Instalação
 
