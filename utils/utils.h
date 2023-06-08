@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdbool.h>
-#include <windows.h>
+
+#include "../consts.h"
 
 
 /**
@@ -46,6 +47,14 @@ bool check_exit();
  * @param _docs: Número da cor de acordo com a tabela ANSI.
  * @return: Cor desejada no terminal
  * */
-WINBOOL color(int _color);
+void color(int _color);
+
+/**
+ * Realiza médias aritméticas
+ * @param _sum: Soma dos valores.
+ * @param _n_elements: Quantidade de elementos.
+ * @return: Média Aritmética;
+ * */
+float arithmetic_average(float _sum, int _n_elements);
 
 #endif //PORTSIMULATOR_UTILS_H

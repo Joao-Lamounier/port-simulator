@@ -54,8 +54,16 @@ de funcionamento do simulador de porto em linguagem C.
 
 ### Requisitos do Sistema
 
-* Sistema Operacional Windows;
+* Sistemas Operacionais:
+   * Windows;
+   * macOS;
+   * Linux;
+
 * Compilador C;
+
+O programa é compatível com diferentes 
+sistemas operacionais, incluindo Windows, macOS
+e Linux. Certifique-se de ter um compilador C instalado em seu sistema, independentemente do sistema operacional escolhido.
 
 ### Instalação
 
@@ -201,9 +209,10 @@ a um novo cais.
 ### Compilação e Execução
 
 * Abra um terminal no diretório raiz do projeto.
-* Execute o seguinte comando para compilar e executar o programa.
+* Execute o seguinte comando para compilar e 
+executar o programa.
 
-    `make port-simulator`
+  `make port-simulator`
 
 ### Limitações e Possíveis Melhorias
 O Port Simulator não perssiste dados em memória, 

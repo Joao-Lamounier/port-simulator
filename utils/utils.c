@@ -39,7 +39,38 @@ bool check_exit() {
     return false;
 }
 
-WINBOOL color(int _color) {
-    return SetConsoleTextAttribute(GetStdHandle((STD_OUTPUT_HANDLE)), _color);
+void color(int _color) {
+    switch (_color) {
+        case 0:
+            printf(ANSI_COLOR_BLACK);
+            break;
+        case 1:
+            printf(ANSI_COLOR_RED);
+            break;
+        case 2:
+            printf(ANSI_COLOR_GREEN);
+            break;
+        case 3:
+            printf(ANSI_COLOR_YELLOW);
+            break;
+        case 4:
+            printf(ANSI_COLOR_BLUE);
+            break;
+        case 5:
+            printf(ANSI_COLOR_MAGENTA);
+            break;
+        case 6:
+            printf(ANSI_COLOR_CYAN);
+            break;
+        case 7:
+            printf(ANSI_COLOR_WHITE);
+            break;
+        default:
+            printf(ANSI_COLOR_RESET);
+            break;
+    }
 }
 
+float arithmetic_average(float _sum, int _n_elements) {
+    return _sum / (float) _n_elements;
+}

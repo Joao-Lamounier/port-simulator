@@ -7,6 +7,5 @@ void transport_movements(Docs *_docs, CrossbeamCollection *_collection) {
             _collection->crossbeam[_docs->pier[i].index_cross]->time_units == 1) {
             _docs->pier[i].move++;
         }
-
     }
 }
