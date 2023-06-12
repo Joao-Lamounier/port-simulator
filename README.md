@@ -252,6 +252,8 @@ No geral, este projeto me proporcionou um valioso
 aprendizado sobre aplicação de estrutura de dados
 em problemas reais.
 
+### Referências
+Ziviane, N. (06/2010). *Projeto de Algoritmos com Implementações em Pascal e C*. Editora Cengage Learning.
 
 Autor: João Felipe Silva Lamounier.
 
